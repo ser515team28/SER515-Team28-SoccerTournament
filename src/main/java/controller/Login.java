@@ -53,7 +53,7 @@ public class Login extends HttpServlet {
 					response.sendRedirect("admin/home.jsp");
 				}
 			} else {
-				session.setAttribute("msg", "Invalid email or password");
+				session.setAttribute("msg", " Invalid email or password ");
 				session.setAttribute("class", "alert-danger");
 				response.sendRedirect("index.jsp");
 			}
