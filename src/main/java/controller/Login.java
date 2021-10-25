@@ -46,7 +46,7 @@ public class Login extends HttpServlet {
 				session.setAttribute("name", rs.getString(3));
 				session.setAttribute("usertype", rs.getInt(6));
 				if(rs.getInt(6) == 0) {
-					response.sendRedirect("student/home.jsp");
+					response.sendRedirect("admin/home.jsp");
 				} else if (rs.getInt(6) == 1) {
 					response.sendRedirect("faculty/home.jsp");
 				} else if (rs.getInt(6) == 2) {

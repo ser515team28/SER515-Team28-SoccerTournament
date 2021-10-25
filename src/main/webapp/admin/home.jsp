@@ -23,7 +23,7 @@
     }
     total = open + close;
     %>
-    <main role="main" class="container">
+    <main role="main" class="container"> 	
         <%@include file="/includes/msg.jsp"%>
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">

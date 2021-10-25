@@ -231,4 +231,16 @@
     <servlet-name>RatingAdd</servlet-name>
     <url-pattern>/announcements/RatingAdd</url-pattern>
   </servlet-mapping>
+  
+  <!--Coach package servlet mapping   -->
+   <servlet>
+    <display-name>coachRegistration</display-name>
+    <servlet-name>coachRegistration</servlet-name>
+    <servlet-class>coachController.coachRegistration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>coachRegistration</servlet-name>
+    <url-pattern>/coach/coachRegistration</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
