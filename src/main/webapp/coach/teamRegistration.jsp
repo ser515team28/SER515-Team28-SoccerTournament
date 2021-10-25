@@ -8,7 +8,8 @@
     <%@include file="/includes/header.jsp"%>
     <%
     Connection con = ConnectionProvider.getConnection();
-	PreparedStatement ps = con.prepareStatement("select TeamID,TeamName,TeamLOGO from Team_MST where coachId=9");
+    String query="select TeamID,TeamName,TeamLOGO from Team_MST where coachId=(select id from users where email=\""+ session.getAttribute("email") +"\")";
+	PreparedStatement ps = con.prepareStatement((query));
 	ResultSet rs = ps.executeQuery();
     
     
