@@ -9,42 +9,34 @@
     <main role="main" class="container"> <%@include file="/includes/msg.jsp"%>
     <div class="card">
         <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Coach Registration</h2>
+            <h2 class="float-left">Add Player</h2>
         </div>
         <div class="card-body">
-            <form action="coachRegistration" method="post">
+            <form action="PlayerAdd" method="post">
                 <div class="form-group">
                     <label for="name" class="control-label">Name</label> <input type="text" name="name" id="name" class="form-control"
                         required>
                 </div>
+                
                 <div class="form-group">
                     <label for="email" class="control-label">E-Mail</label> <input type="email" name="email" id="email" class="form-control"
                         required>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="control-label">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" required>
+                    <label for="age" class="control-label">Age</label>
+                    <input type="number" name="age" id="age" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    
-                    <label for="USER_TYPE" class="control-label">Type</label>
-                    <select id="USER_TYPE" name="USER_TYPE" class="form-control">
-                    <%
-                    Connection con=ConnectionProvider.getConnection();
-                    PreparedStatement ps = con.prepareStatement("select user_id,role from user_role_mapping where user_id=0");
-                    ResultSet rs = ps.executeQuery();
-                    while(rs.next())
-                    {
-                    %>
-                        <option value="<%= rs.getInt(1) %>"><%= rs.getString(2) %></option>
-                    <%   
-                    }
-                    %>
-                    
+                    <label for="position" class="control-label">Position</label>
+                    <select id="position" name="position" class="form-control">
+                        <option value="Goalkeeper">Goalkeeper</option>
+                        <option value="Defender">Defender</option>
+                        <option value="MidFielder">MidFielder</option>
+                        <option value="Forward">Forward</option>
+                    </select>
                 </div>
-                
                 <div class="form-group">
-                    <input type="submit" class="btn btn-success btn-lg btn-block" value="Add User">
+                    <input type="submit" class="btn btn-success btn-lg btn-block" value="Add Player">
                 </div>
             </form>
         </div>

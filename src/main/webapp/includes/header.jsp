@@ -49,7 +49,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/coachRegistration.jsp">Registration</a>
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/teamRegistration.jsp">Register Team</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/playerRegistration.jsp">Register Players</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/playerDetails.jsp">Register Players</a>
     
                     </div>
                 </li>
@@ -69,7 +69,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/coachRegistration.jsp">Registration</a>
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/teamRegistration.jsp">Register Team</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/playerRegistration.jsp">Register Players</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/playerDetails.jsp">Register Players</a>
     
                     </div>
                 </li>
