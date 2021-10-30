@@ -29,30 +29,6 @@ public class AddPlayer extends HttpServlet {
     }
 
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try{  
-            Connection con=ConnectionProvider.getConnection() ;  
-            PreparedStatement ps=con.prepareStatement("Insert into player_mst (name,email,age,position) values(?,?,?,?)");
-		
-			ps.setString(1,	request.getParameter("name"));
-			ps.setString(2, request.getParameter("email"));
-			ps.setInt(3, Integer.parseInt(request.getParameter("age")));
-			ps.setString(4,request.getParameter("position"));
-			
-			ps.executeUpdate();
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-		HttpSession session = request.getSession();
-		session.setAttribute("msg", "Player added successfully.");
-		session.setAttribute("class", "alert-success");
-		response.sendRedirect(request.getContextPath() + "/coach/playerDetails.jsp");
-	}
 
 }
