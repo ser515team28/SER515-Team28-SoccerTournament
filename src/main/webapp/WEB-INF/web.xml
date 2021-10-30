@@ -253,4 +253,13 @@
     <url-pattern>/coach/PlayerAdd</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <display-name>AddTeam</display-name>
+    <servlet-name>AddTeam</servlet-name>
+    <servlet-class>coachController.AddTeam</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddTeam</servlet-name>
+    <url-pattern>/coach/AddTeam</url-pattern>
+  </servlet-mapping>
 </web-app>
