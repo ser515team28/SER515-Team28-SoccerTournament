@@ -56,7 +56,21 @@
     </main>
     <main role="main" class="container"> 
     
-  
+    <% while(rs.next()){ %>
+    	<div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div  class="card-header"><%=rs.getInt(1)%></div>
+                    <div class="card-body text-center">
+                        <button><img src="<%=request.getContextPath()%>/<%=rs.getString(3)%>"><a href="playerDetails.jsp"/></button>
+                    </div>
+                    <div><%=rs.getString(2)%></div>
+                </div>
+            </div>
+          
+        </div>
+               
+    <%}%>
     	
        
         
