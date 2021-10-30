@@ -13,23 +13,23 @@
             <h2 class="float-left">Add Team</h2>
         </div>
         <div class="card-body">
-            <form action="PlayerAdd" method="post">
+            <form action="AddTeam" method="post">
                 <div class="form-group">
                     <label for="teamname" class="control-label">Team Name</label> <input type="text" name="teamname" id="teamname" class="form-control"
                         required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="teamcode" class="control-label">Team Code</label> <input type="email" name="teamcode" id="teamcode" class="form-control"
+                    <label for="teamcode" class="control-label">Team Code</label> <input type="text" name="teamcode" id="teamcode" class="form-control"
                         required>
                 </div>
                 <div class="form-group">
                     <label for="clubcode" class="control-label">Club Code</label>
-                    <input type="number" name="clubcode" id="clubcode" class="form-control" required>
+                    <input type="text" name="clubcode" id="clubcode" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="city" class="control-label">City</label>
-                    <input type="number" name="city" id="city" class="form-control" required>
+                    <input type="text" name="city" id="city" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-success btn-lg btn-block" value="Add Team">
@@ -49,13 +49,23 @@
     
     
     %>
-    <main role="main" class="container">
-    <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Registered Teams</h2>
-    </div>
-    </main>
-    <main role="main" class="container"> 
     
+    <main role="main" class="container"> 
+     <% while(rs.next()){ %>
+    	<div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div  class="card-header"><%=rs.getInt(1)%></div>
+                    <div class="card-body text-center">
+                        <button><img src="<%=request.getContextPath()%>/<%=rs.getString(3)%>"><a href="playerDetails.jsp"/></button>
+                    </div>
+                    <div><%=rs.getString(2)%></div>
+                </div>
+            </div>
+          
+        </div>
+               
+    <%}%>
   
     	
        
