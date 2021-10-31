@@ -248,4 +248,25 @@
     <url-pattern>/coach/PlayerAdd</url-pattern>
   </servlet-mapping>
   
+  <!--Sponsor package servlet mapping   -->
+  <servlet>
+    <display-name>Sponsorship</display-name>
+    <servlet-name>Sponsorship</servlet-name>
+    <servlet-class>sponsorController.Sponsorship</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sponsorship</servlet-name>
+    <url-pattern>/sponsor/sponsorship</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <display-name>Sponsor</display-name>
+    <servlet-name>Sponsor</servlet-name>
+    <servlet-class>sponsorController.Sponsor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sponsor</servlet-name>
+    <url-pattern>/sponsor/sponsor</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

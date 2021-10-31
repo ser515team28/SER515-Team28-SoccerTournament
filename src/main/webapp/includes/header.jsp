@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </li>
-                 <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Coaches </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
@@ -53,10 +53,18 @@
     
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sponsor </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsor.jsp">Sponsors</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsorship.jsp">Sponsorship</a>
+                    </div>
+                </li>
                
                 <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/admin/category/show.jsp">Teams</a></li>
                 <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/admin/article/show.jsp">Articles</a></li>
-                <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/sponsors.jsp">Sponsors</a></li>
+                <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/sponsor.jsp">Sponsors</a></li>
                 <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/admin/faq/show.jsp">FAQ</a></li>
                        <%
                 	   }
@@ -65,16 +73,23 @@
                         
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/announcements">Announcements</a></li>
                         <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Coaches </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/coachRegistration.jsp">Registration</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/teamRegistration.jsp">Register Team</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/playerDetails.jsp">Register Players</a>
-    
-                    </div>
-                </li>
-                		<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/sponsors.jsp">Sponsors</a></li>
+		                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+		                    	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Coaches </a>
+		                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+		                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/coachRegistration.jsp">Registration</a>
+		                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/teamRegistration.jsp">Register Team</a>
+		                        <a class="dropdown-item" href="<%=request.getContextPath()%>/coach/playerDetails.jsp">Register Players</a>
+		    
+		                    </div>
+	                	</li>
+                		<li class="nav-item dropdown">
+                    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sponsor </a>
+                    		<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsor.jsp">Sponsors</a>
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsorship.jsp">Sponsorship</a>
+                    		</div>
+                		</li>
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/faq.jsp">FAQ</a></li>
                         <%         
                         }
@@ -93,7 +108,14 @@
         
                         </div>
                     </li>
-                    		<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/sponsors.jsp">Sponsors</a></li>
+                    		<li class="nav-item dropdown">
+                    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sponsor </a>
+                    		<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsor.jsp">Sponsors</a>
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsorship.jsp">Sponsorship</a>
+                    		</div>
+                		</li>
                             <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/faq.jsp">FAQ</a></li>
                             <%         
                             }
@@ -101,7 +123,14 @@
                         %>
                        
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/announcements">Announcements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/sponsors.jsp">Sponsors</a></li>
+                        <li class="nav-item dropdown">
+                    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sponsor </a>
+                    		<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsor.jsp">Sponsors</a>
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsorship.jsp">Sponsorship</a>
+                    		</div>
+                		</li>
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/faq.jsp">FAQ</a></li>
                         <%         
                         }
@@ -117,7 +146,14 @@
                         			<a class="dropdown-item" href="<%=request.getContextPath()%>/coach/coachRegistration.jsp">Registration</a>
                         		</div>
                         </li>	
-                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/sponsors.jsp">Sponsors</a></li>
+                        <li class="nav-item dropdown">
+                    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sponsor </a>
+                    		<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsor.jsp">Sponsors</a>
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/sponsor/sponsorship.jsp">Sponsorship</a>
+                    		</div>
+                		</li>
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/faq.jsp">FAQ</a></li>
                         <%
                     }
@@ -134,7 +170,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<%=request.getContextPath()%>/user/changepassword.jsp">Change Password</a>
                             <div class="dropdown-divider"></div>
-          
                             <a class="dropdown-item" href="<%=request.getContextPath()%>/feedback.jsp">Feedback</a>
                             <a class="dropdown-item" href="<%=request.getContextPath()%>/Logout">Logout</a>
                         </div>
