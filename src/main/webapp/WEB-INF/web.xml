@@ -248,25 +248,30 @@
     <url-pattern>/coach/PlayerAdd</url-pattern>
   </servlet-mapping>
   
-  <!--Sponsor package servlet mapping   -->
   <servlet>
-    <display-name>Sponsorship</display-name>
-    <servlet-name>Sponsorship</servlet-name>
-    <servlet-class>sponsorController.Sponsorship</servlet-class>
+    <display-name>AddTeam</display-name>
+    <servlet-name>AddTeam</servlet-name>
+    <servlet-class>coachController.AddTeam</servlet-class>
   </servlet>
   <servlet-mapping>
+<<<<<<< HEAD
     <servlet-name>Sponsorship</servlet-name>
     <url-pattern>/sponsor/sponsorship</url-pattern>
+=======
+    <servlet-name>AddTeam</servlet-name>
+    <url-pattern>/coach/AddTeam</url-pattern>
+>>>>>>> US-56
   </servlet-mapping>
   
+  <!--Referee package servlet mapping   -->
   <servlet>
-    <display-name>Sponsor</display-name>
-    <servlet-name>Sponsor</servlet-name>
-    <servlet-class>sponsorController.Sponsor</servlet-class>
+    <display-name>refereeRegistration</display-name>
+    <servlet-name>refereeRegistration</servlet-name>
+    <servlet-class>refereeController.refereeRegistration</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Sponsor</servlet-name>
-    <url-pattern>/sponsor/sponsor</url-pattern>
+    <servlet-name>refereeRegistration</servlet-name>
+    <url-pattern>/referee/refereeRegistration</url-pattern>
   </servlet-mapping>
-  
+
 </web-app>

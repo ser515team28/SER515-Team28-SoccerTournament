@@ -13,7 +13,7 @@ public class ConnectionProvider {
 			/* Initialize and load the JDBC-ODBC Bridge driver */	
 			Class.forName("com.mysql.jdbc.Driver");
 			/* Establish a connection with a data source */
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/x", "root", "Pim@280502@Mar");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/x", "root", "root");
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			System.out.print("********************");
