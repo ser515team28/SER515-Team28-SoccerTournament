@@ -1,4 +1,5 @@
-package coachController;
+package refereeController;
+
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,13 +17,13 @@ import util.ConnectionProvider;
 /**
  * Servlet implementation class UserAdd
  */
-public class coachRegistration extends HttpServlet {
+public class refereeRegistration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public coachRegistration() {
+    public refereeRegistration() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -50,7 +51,7 @@ public class coachRegistration extends HttpServlet {
 			ps.setString(3, request.getParameter("name"));
 			ps.setString(4, request.getParameter("email"));
 			ps.setString(5, request.getParameter("password"));
-			ps.setInt(6, 0);
+			ps.setInt(6, 1);
 			
 			ps.executeUpdate();
 			

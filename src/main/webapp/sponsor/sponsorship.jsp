@@ -9,7 +9,7 @@
     <main role="main" class="container"> <%@include file="/includes/msg.jsp"%>
     <div class="card">
         <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Coach Registration</h2>
+            <h2 class="float-left">Sponsor Registration</h2>
         </div>
         <div class="card-body">
             <form action="sponsorship" method="post">

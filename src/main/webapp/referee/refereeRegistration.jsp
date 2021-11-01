@@ -9,29 +9,13 @@
     <main role="main" class="container"> <%@include file="/includes/msg.jsp"%>
     <div class="card">
         <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Add User</h2>
+            <h2 class="float-left">Refree Registration</h2>
         </div>
         <div class="card-body">
-            <form action="UserAdd" method="post">
+            <form action="refereeRegistration" method="post">
                 <div class="form-group">
                     <label for="name" class="control-label">Name</label> <input type="text" name="name" id="name" class="form-control"
                         required>
-                </div>
-                <div class="form-group">
-                    <label for="dept_id" class="control-label">Department</label>
-                    <select name="dept_id" id="dept_id" class="form-control">
-                    <%
-                    Connection con=ConnectionProvider.getConnection();
-                    PreparedStatement ps = con.prepareStatement("select id,name from departments order by name");
-                    ResultSet rs = ps.executeQuery();
-                    while(rs.next())
-                    {
-                    %>
-                        <option value="<%= rs.getInt(1) %>"><%= rs.getString(2) %></option>
-                    <%   
-                    }
-                    %>
-                    </select>
                 </div>
                 <div class="form-group">
                     <label for="email" class="control-label">E-Mail</label> <input type="email" name="email" id="email" class="form-control"
@@ -41,16 +25,8 @@
                     <label for="password" class="control-label">Password</label>
                     <input type="password" name="password" id="password" class="form-control" required>
                 </div>
-                <div class="form-group">
-                    <label for="USER_TYPE" class="control-label">Type</label>
-                    <select id="USER_TYPE" name="USER_TYPE" class="form-control">
-                        <option value="0">Coach</option>
-                        <option value="1">Referee</option>
-                        <option value="2">Admin</option>
-                        <option value="3">Coach Director</option>
-                        <option value="4">Referee Director</option>
-                    </select>
-                </div>
+                
+                
                 <div class="form-group">
                     <input type="submit" class="btn btn-success btn-lg btn-block" value="Add User">
                 </div>

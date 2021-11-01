@@ -25,13 +25,7 @@
                     <label for="password" class="control-label">Password</label>
                     <input type="password" name="password" id="password" class="form-control" required>
                 </div>
-                <div class="form-group">
-                    
-                    <label for="USER_TYPE" class="control-label">Type</label>
-                    <select id="USER_TYPE" name="USER_TYPE" class="form-control">
-                   
-                    
-                </div>
+                
                 
                 <div class="form-group">
                     <input type="submit" class="btn btn-success btn-lg btn-block" value="Add User">
