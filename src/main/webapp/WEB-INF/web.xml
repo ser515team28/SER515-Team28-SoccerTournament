@@ -254,13 +254,8 @@
     <servlet-class>coachController.AddTeam</servlet-class>
   </servlet>
   <servlet-mapping>
-<<<<<<< HEAD
-    <servlet-name>Sponsorship</servlet-name>
-    <url-pattern>/sponsor/sponsorship</url-pattern>
-=======
     <servlet-name>AddTeam</servlet-name>
     <url-pattern>/coach/AddTeam</url-pattern>
->>>>>>> US-56
   </servlet-mapping>
   
   <!--Referee package servlet mapping   -->
