@@ -255,7 +255,7 @@
     <servlet-class>sponsorController.Sponsorship</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>sponsorship</servlet-name>
+    <servlet-name>Sponsorship</servlet-name>
     <url-pattern>/sponsor/sponsorship</url-pattern>
   </servlet-mapping>
   
