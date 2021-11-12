@@ -1,0 +1,10 @@
+127.0.0.1 - - [11/Nov/2021:14:19:54 -0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:19:55 -0700] "GET /SoccerT/ HTTP/1.1" 200 7725
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:19:57 -0700] "GET /SoccerT/referee/refereeRegistration.jsp HTTP/1.1" 200 7841
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:20:09 -0700] "POST /SoccerT/referee/refereeRegistration HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:20:09 -0700] "GET /SoccerT/admin/home.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:20:09 -0700] "GET /SoccerT/index.jsp HTTP/1.1" 200 7936
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:21:02 -0700] "GET /SoccerT/referee/refereeRegistration.jsp HTTP/1.1" 200 7841
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:21:14 -0700] "POST /SoccerT/referee/refereeRegistration HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:21:14 -0700] "GET /SoccerT/admin/home.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Nov/2021:14:21:14 -0700] "GET /SoccerT/index.jsp HTTP/1.1" 200 7936
