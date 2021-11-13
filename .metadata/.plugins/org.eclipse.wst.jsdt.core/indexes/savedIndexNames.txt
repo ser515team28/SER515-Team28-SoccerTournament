@@ -1,7 +1,10 @@
-INDEX VERSION 1.4+C:\Users\praya\Desktop\Eclipse_workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+INDEX VERSION 1.4+C:\Users\praya\Desktop\Eclipse_workspace - Copy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2018227273.index
 1143383399.index
-1517653009.index
-408061514.index
-2381655328.index
-2316695757.index
-1360553511.index
+170833229.index
+2671376525.index
+254946738.index
+1787220389.index
+838677939.index
+2480444668.index
+4160952835.index

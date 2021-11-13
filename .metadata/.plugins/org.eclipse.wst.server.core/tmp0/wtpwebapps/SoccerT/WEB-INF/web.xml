@@ -226,9 +226,7 @@
     <servlet-name>RatingAdd</servlet-name>
     <url-pattern>/announcements/RatingAdd</url-pattern>
   </servlet-mapping>
-  
-  <!--Coach package servlet mapping   -->
-   <servlet>
+  <servlet>
     <display-name>coachRegistration</display-name>
     <servlet-name>coachRegistration</servlet-name>
     <servlet-class>coachController.coachRegistration</servlet-class>
@@ -237,7 +235,6 @@
     <servlet-name>coachRegistration</servlet-name>
     <url-pattern>/coach/coachRegistration</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <display-name>AddPlayer</display-name>
     <servlet-name>AddPlayer</servlet-name>
@@ -247,7 +244,6 @@
     <servlet-name>AddPlayer</servlet-name>
     <url-pattern>/coach/PlayerAdd</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <display-name>AddTeam</display-name>
     <servlet-name>AddTeam</servlet-name>
@@ -257,8 +253,6 @@
     <servlet-name>AddTeam</servlet-name>
     <url-pattern>/coach/AddTeam</url-pattern>
   </servlet-mapping>
-  
-  <!--Referee package servlet mapping   -->
   <servlet>
     <display-name>refereeRegistration</display-name>
     <servlet-name>refereeRegistration</servlet-name>
@@ -268,5 +262,23 @@
     <servlet-name>refereeRegistration</servlet-name>
     <url-pattern>/referee/refereeRegistration</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <display-name>refereeDirector</display-name>
+    <servlet-name>refereeDirector</servlet-name>
+    <servlet-class>refereeController.refereeDirector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>refereeDirector</servlet-name>
+    <url-pattern>/referee/refereeDirector</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Rd</display-name>
+    <servlet-name>Rd</servlet-name>
+    <servlet-class>refereeController.Rd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Rd</servlet-name>
+    <url-pattern>/referee/Rd</url-pattern>
+  </servlet-mapping>
 </web-app>

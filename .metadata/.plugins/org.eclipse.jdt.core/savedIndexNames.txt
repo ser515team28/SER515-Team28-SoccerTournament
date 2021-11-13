@@ -1,9 +1,7 @@
-INDEX VERSION 1.131+C:\Users\praya\Desktop\Eclipse_workspace\.metadata\.plugins\org.eclipse.jdt.core
-1143383399.index
-3396841483.index
-689299304.index
+INDEX VERSION 1.131+C:\Users\praya\Desktop\Eclipse_workspace - Copy\.metadata\.plugins\org.eclipse.jdt.core
 832760842.index
+3396841483.index
 1865797976.index
-1592508905.index
 583329838.index
-1832588952.index
+3113962789.index
+1143383399.index
