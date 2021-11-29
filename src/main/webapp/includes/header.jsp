@@ -25,6 +25,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/complaint/unassigned.jsp">Unassigned Complaint</a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/tournament/createTournament.jsp">Pending Assigned Complaint Report</a>
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/pending.jsp">Pending Assigned Complaint Report</a>
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/days.jsp">Date range Report</a>
                         <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/departments.jsp">Department wise Complaint Report</a>
