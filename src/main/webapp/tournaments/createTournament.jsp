@@ -9,12 +9,12 @@
     <main role="main" class="container"> <%@include file="/includes/msg.jsp"%>
     <div class="card">
         <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Add Player</h2>
+            <h2 class="float-left">Add Tournament</h2>
         </div>
         <div class="card-body">
             <form action="TournamentAdd" method="post">
                 <div class="form-group">
-                    <label for="name" class="control-label">Name</label> <input type="text" name="name" id="name" class="form-control"
+                    <label for="name" class="control-label">Tournament Name</label> <input type="text" name="name" id="name" class="form-control"
                         required>
                 </div>
                 
@@ -29,24 +29,49 @@
                 
                 
                 <div class="form-group">
-                    <label for="position" class="control-label">Position</label>
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-					<label for="vehicle1"> RCB</label><br>
-					<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-					<label for="vehicle2"> CSK</label><br>
-					<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-					<label for="vehicle3"> MI</label><br>
+                    <label for="position" class="control-label">Participating Teams</label>
+                    <br>
+                    <%
+                    	Connection con = ConnectionProvider.getConnection();
+                    	PreparedStatement ps = con.prepareStatement("select TeamName,TeamID from team_mst");
+                    	ResultSet rs = ps.executeQuery();
+                    	while (rs.next())
+                        {
+                            
+                        %>
+                        
+                        <input type="checkbox" id=<%=rs.getInt(2)%>  value="<%=rs.getString(1)%>">
+						<label for="vehicle1"><%=rs.getString(1)%></label><br>
+                        
+                        <%   
+                        }
+                    %>
                 </div>
                 
                 <div class="form-group">
-                    <label for="position" class="control-label">Position</label>
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-					<label for="vehicle1"> RCB</label><br>
-					<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-					<label for="vehicle2"> CSK</label><br>
-					<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-					<label for="vehicle3"> MI</label><br>
+                
+                    <label for="position" class="control-label">Participating Referees</label>
+                    <br>
+                    <%
+                    	
+                    	ps = con.prepareStatement("select name,id from users where user_type=1");
+                    	rs = ps.executeQuery();
+                    	while (rs.next())
+                        {
+                            
+                        %>
+                        
+                        <input type="checkbox" id=<%=rs.getInt(2)%>  value="<%=rs.getString(1)%>">
+						<label for="vehicle1"><%=rs.getString(1)%></label><br>
+                        
+                        <%   
+                        }
+                    %>
                 </div>
+                
+                	
+                
+                
                 
                 <div class="form-group">
                     <input type="submit" class="btn btn-success btn-lg btn-block" value="Add Tournament">
