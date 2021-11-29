@@ -17,7 +17,7 @@
                 	if (session.getAttribute("usertype") != null) {
                 		if ((int) session.getAttribute("usertype") == 2) {
                         %>
-                <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/admin/home.jsp">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/admin/user/show.jsp">Users</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
@@ -138,7 +138,7 @@
                     else
                     {
                         %>
-                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/admin/home.jsp">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>">Home</a></li>
                          <li class="nav-item dropdown">
                     			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
                    					 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Coaches </a>
