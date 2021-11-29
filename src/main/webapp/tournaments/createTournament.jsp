@@ -27,6 +27,10 @@
                     <input type="date" id="end" name="tournament_end" class="form-control" >
                 </div>
                 
+                <div class="form-group">
+                    <label for="name" class="control-label">Location</label> <input type="text" name="loaction" id="loaction" class="form-control"
+                        required>
+                </div>
                 
                 <div class="form-group">
                     <label for="position" class="control-label">Participating Teams</label>
@@ -35,6 +39,27 @@
                     	Connection con = ConnectionProvider.getConnection();
                     	PreparedStatement ps = con.prepareStatement("select TeamName,TeamID from team_mst");
                     	ResultSet rs = ps.executeQuery();
+                    	while (rs.next())
+                        {
+                            
+                        %>
+                        
+                        <input type="checkbox" id=<%=rs.getInt(2)%>  value="<%=rs.getString(1)%>">
+						<label for="vehicle1"><%=rs.getString(1)%></label><br>
+                        
+                        <%   
+                        }
+                    %>
+                </div>
+                
+                <div class="form-group">
+                
+                    <label for="position" class="control-label">Preferred Fields</label>
+                    <br>
+                    <%
+                    	
+                    	ps = con.prepareStatement("select name,id from location");
+                    	rs = ps.executeQuery();
                     	while (rs.next())
                         {
                             
