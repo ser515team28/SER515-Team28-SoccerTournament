@@ -9,11 +9,9 @@
     <main role="main" class="container"> <%@include file="/includes/msg.jsp"%>
     <div class="card">
         <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Referee Registration</h2>
+            <h2 class="float-left">Volunteer Registration</h2>
         </div>
         <div class="card-body">
-        	<h6>You must be at least 12 years of age to be a Referee.</h6>
-        	<br>
             <form action="refereeRegistration" method="post">
                 <div class="form-group">
                     <label for="name" class="control-label">Name</label> <input type="text" name="name" id="name" class="form-control"

@@ -25,7 +25,7 @@
 			</div>
 		  <div class="card mb-5 border-light" style="max-width: 540px;">
 			  <div class="row g-0">
-			    <div class="col-md-6">
+			    <div class="col-md-12">
 			      <div class="card-body text-center">
 			        <h5 class="card-title"></h5>
 			        <p class="card-text">11/29</p>

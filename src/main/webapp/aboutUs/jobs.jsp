@@ -17,13 +17,13 @@
 			        <h5 class="card-title">Volunteer</h5>
 			        <p class="card-text">Volunteers are an important part of our success as the nations largest league and tournament host. We offer multiple opportunities to give back to the beautiful game. If interested in volunteering for any of the below positions,...</p>
 			        <a href="<%=request.getContextPath()%>/coach/playerDetails.jsp" class="card-text"><small class="text-muted">read more</small></a>
-			      </div>
+			    </div>
 			    </div>
 			    <div class="card mb-3">
 			      <div class="card-body">
 			        <h5 class="card-title">Referee</h5>
 			        <p class="card-text">We currently contracting new and experienced certified referees. Refereeing is a great way to be involved in soccer in a positive way and earn additional money. Join the referee pool for...</p>
-			        <a href="<%=request.getContextPath()%>/coach/playerDetails.jsp" class="card-text"><small class="text-muted">read more</small></a>
+			        <a href="<%=request.getContextPath()%>/referee/refereeRegistration.jsp" class="card-text"><small class="text-muted">read more</small></a>
 			      </div>
 			    </div>
 			  </div>
