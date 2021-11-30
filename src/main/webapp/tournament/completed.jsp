@@ -29,7 +29,7 @@
 			    </div>
 			  </div>
 			</div>
-		  <div class="card mb-5 border-light" style="max-width: 540px;">
+		  <div class="card mb-5 border-light" style="max-width: 520px;">
 			  <div class="row g-0">
 			  <!-- 
 			  	<div class="col-md-3 text-center">
@@ -53,7 +53,7 @@
 			  	 -->
 			  </div>
 			</div>
-		  <div class="card mb-5 border-light" style="max-width: 540px;">
+		  <div class="card mb-5 border-light" style="max-width: 520px;">
 			  <div class="row g-0">
 			    <div class="col-md-4" style="padding: 25px">
 			      <img src="<%=request.getContextPath()%>/logo.png" class="img-fluid rounded-start" alt="...">
