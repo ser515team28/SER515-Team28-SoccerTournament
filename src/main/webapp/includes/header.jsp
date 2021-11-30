@@ -149,6 +149,7 @@
                    					 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Referee </a>
                     			<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         			<a class="dropdown-item" href="<%=request.getContextPath()%>/referee/refereeRegistration.jsp">Registration</a>
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/referee/RefereeCOE.jsp">Code of Ethics for Referee</a>
                         		</div>
                         </li>
                         <li class="nav-item dropdown">
