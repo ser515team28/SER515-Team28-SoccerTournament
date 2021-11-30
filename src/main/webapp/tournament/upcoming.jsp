@@ -25,10 +25,6 @@
 			</div>
 		  <div class="card mb-5 border-light" style="max-width: 540px;">
 			  <div class="row g-0">
-			  	<div class="col-md-3 text-center">
-			  		<br>
-			  		<h1>3</h1>
-			  	</div>
 			    <div class="col-md-6">
 			      <div class="card-body text-center">
 			        <h5 class="card-title"></h5>
@@ -36,10 +32,6 @@
 			        <p class="card-text"><small class="text-muted">1:00 PM MST</small></p>
 			      </div>
 			    </div>
-			    <div class="col-md-3 text-center">
-			    	<br>
-			  		<h1>3</h1>
-			  	</div>
 			  </div>
 			</div>
 		  <div class="card mb-5 border-light" style="max-width: 540px;">
