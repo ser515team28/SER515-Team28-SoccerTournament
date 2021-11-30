@@ -4,6 +4,11 @@
 <html>
 <head>
 <%@include file="/includes/head.jsp"%>
+<style type="text/css">
+.teamName {
+      padding-top: 10px;
+}
+</style>
 </head>
 <body style="background-color: #f8f9fa !important;">
     <%@include file="/includes/header.jsp"%>
@@ -44,7 +49,7 @@
     
     <%
     Connection con = ConnectionProvider.getConnection();
-    String query="select TeamID,TeamName,TeamLOGO from Team_MST where coachId=(select id from users where email=\""+ session.getAttribute("email") +"\")";
+    String query="select TeamID,TeamName,TeamCode from Team_MST where coachId=(select id from users where email=\""+ session.getAttribute("email") +"\")";
 	PreparedStatement ps = con.prepareStatement((query));
 	ResultSet rs = ps.executeQuery();
     
@@ -57,23 +62,15 @@
             <div class="col mb-4">
                 <div class="card text-white bg-warning mb-3">
                     <div  class="card-header"><%=rs.getInt(1)%></div>
-                    <div class="card-body text-center">
-                        <button><img src="<%=request.getContextPath()%>/<%=rs.getString(3)%>"><a href="playerDetails.jsp"/></button>
+                    <div class="card-body ">
+                        <a class="btn btn-success btn-block" href="<%=request.getContextPath()%>/coach/playerDetails.jsp" style="background-color:#FFC107; font-size: 35px" ><%=rs.getString(3) %></a>
+                        <div class="teamName"><%=rs.getString(2)%></div>
                     </div>
-                    <div><%=rs.getString(2)%></div>
                 </div>
             </div>
-          
         </div>
-               
     <%}%>
-  
-    	
-       
-        
     </main>
-    
-     
     <%@include file="/includes/footer.jsp"%>
 </body>
 </html>

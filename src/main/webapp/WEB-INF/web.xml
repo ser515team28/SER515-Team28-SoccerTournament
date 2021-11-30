@@ -268,5 +268,16 @@
     <servlet-name>refereeRegistration</servlet-name>
     <url-pattern>/referee/refereeRegistration</url-pattern>
   </servlet-mapping>
+  
+  <!--Sponsor package servlet mapping   -->
+  <servlet>
+    <display-name>Sponsorship</display-name>
+    <servlet-name>Sponsorship</servlet-name>
+    <servlet-class>sponsorController.Sponsorship</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sponsorship</servlet-name>
+    <url-pattern>/sponsor/sponsorship</url-pattern>
+  </servlet-mapping>
 
 </web-app>

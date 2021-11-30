@@ -36,7 +36,7 @@ public class Sponsorship extends HttpServlet {
 				max++;
 			}
 			
-			ps=con.prepareStatement("Insert into users values(?,?,?,?,?,?)");
+			ps=con.prepareStatement("Insert into sponsor values(?,?,?,?,?,?)");
 			ps.setInt(1, max);
 			ps.setString(2,	request.getParameter("business_name"));
 			ps.setString(3, request.getParameter("person_name"));
