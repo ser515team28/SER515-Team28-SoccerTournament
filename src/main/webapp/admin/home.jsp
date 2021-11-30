@@ -33,33 +33,35 @@ body {
     <%@include file="/includes/msg.jsp"%>
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
-                <a href="<%=request.getContextPath()%>/tournament/upcoming.jsp" style="text-decoration: none !important">
+                <a href="<%=request.getContextPath()%>/tournament/upcomingTournament.jsp" style="text-decoration: none !important">
                 <div class="card text-white bg-warning mb-3">
                     <div class="card-header">Upcoming Tournaments</div>
                     <div class="card-body text-center">
-                        <h1 class="display-2"><%= open %></h1>
+                        <h1 class="display-2">1</h1>
                     </div>
                 </div>
                 </a>
             </div>
             <div class="col mb-4">
-            	<a href="<%=request.getContextPath()%>/tournament/completed.jsp" style="text-decoration: none !important">
+            	
                 <div class="card text-white bg-success mb-3">
                     <div class="card-header">Completed Tournaments</div>
                     <div class="card-body text-center">
-                        <h1 class="display-2"><%= close %></h1>
+                        <h1 class="display-2">0</h1>
                     </div>
                 </div>
-                </a>
+                
             </div>
             <div class="col mb-4">
+            <a href="<%=request.getContextPath()%>/tournament/upcomingTournament.jsp" style="text-decoration: none !important">
                 <div class="card text-white bg-primary mb-3">
                     <div class="card-header">Total Tournaments held</div>
                     <div class="card-body text-center">
-                        <h1 class="display-2"><%= total %></h1>
+                        <h1 class="display-2">1</h1>
                     </div>
                 </div>
             </div>
+            </a>
         </div>
     </main>
     <%@include file="/includes/footer.jsp"%>
