@@ -23,24 +23,10 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Tournaments </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/complaint/unassigned.jsp">Unassigned Complaint</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/pending.jsp">Pending Assigned Complaint Report</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/days.jsp">Date range Report</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/departments.jsp">Department wise Complaint Report</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/facultys.jsp">Faculty wise Complaint Report</a>
-                        <a class="dropdown-item" href="<%=request.getContextPath()%>/admin/report/categories.jsp">Category wise Complaint Report</a>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-item">
-                            <form action="<%=request.getContextPath()%>/admin/complaint/view.jsp">
-                                <div class="input-group mb-3">
-                                  <input type="number" class="form-control" placeholder="Complaint ID" aria-label="Complaint ID" aria-describedby="button-addon2" name="id" required>
-                                  <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
-                                  </div>
-                                </div>
-                            </form>
-                        </div>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/tournaments/createTournament.jsp">Create Tournament</a>
+                        <a class="dropdown-item" href="<%=request.getContextPath()%>/tournaments/scheduleMatches.jsp">Schedule Matches</a>
+                        
+                        
                     </div>
                 </li>
                 <li class="nav-item dropdown">
