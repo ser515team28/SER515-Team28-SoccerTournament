@@ -16,7 +16,7 @@
 				
 	            <%
 	            	Connection con = ConnectionProvider.getConnection();
-	            	PreparedStatement ps = con.prepareStatement("select business_name from sponsor order by id desc");
+	            	PreparedStatement ps = con.prepareStatement("select business_name from sponsor order by id-description");
 	            	ResultSet rs = ps.executeQuery();
 	            	while (rs.next())
 	                {
