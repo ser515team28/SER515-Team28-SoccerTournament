@@ -1,7 +1,0 @@
-0000000000000000000000000000000000000000 6bce987aa7a072cf7a83dcbc28690d855f7ce559 Jashmin Patel <jasmin.3998@gmail.com> 1634847341 -0700	branch: Created from HEAD
-6bce987aa7a072cf7a83dcbc28690d855f7ce559 0ef79480a734ac9ff2c9d4d8d27483dd2107deac Jashmin Patel <jasmin.3998@gmail.com> 1634847668 -0700	commit: Changed Invalid user condition
-0ef79480a734ac9ff2c9d4d8d27483dd2107deac de6c2e34ec9c669babe4c6952f03161fe2ce401a Jashmin Patel <jasmin.3998@gmail.com> 1635143035 -0700	commit: :# Please enter the commit message for your changes. Lines starting
-de6c2e34ec9c669babe4c6952f03161fe2ce401a 821c4e92b1200803f0b2c16285c7f707bffea4a6 Jashmin Patel <jasmin.3998@gmail.com> 1635143375 -0700	revert: :Revert "Update README.md"
-821c4e92b1200803f0b2c16285c7f707bffea4a6 e1f95ac4633420075f4af96afd23797b9b01200d Jashmin Patel <jasmin.3998@gmail.com> 1635145285 -0700	commit: added Team Registration feature
-e1f95ac4633420075f4af96afd23797b9b01200d 12ea89ed3e30d0767d3ee019242562466baa50ed Jashmin Patel <jasmin.3998@gmail.com> 1635400173 -0700	commit: Intial commit for add/edit/delete player details
-12ea89ed3e30d0767d3ee019242562466baa50ed c779820c4c8df4c6b9b7cd0caa49c708a614f00d Jashmin Patel <jasmin.3998@gmail.com> 1635500535 -0700	commit: CRUD Operation configured for players and teams
