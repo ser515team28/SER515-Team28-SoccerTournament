@@ -48,7 +48,7 @@ public class Login extends HttpServlet {
 				if(rs.getInt(6) == 0) {
 					response.sendRedirect("admin/home.jsp");
 				} else if (rs.getInt(6) == 1) {
-					response.sendRedirect("faculty/home.jsp");
+					response.sendRedirect("admin/home.jsp");
 				} else if (rs.getInt(6) == 2) {
 					response.sendRedirect("admin/home.jsp");
 				}

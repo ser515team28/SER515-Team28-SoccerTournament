@@ -70,8 +70,6 @@
                 	   }
                 		else if ((int) session.getAttribute("usertype") == 0) {
                         %>
-                        
-                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/announcements">Announcements</a></li>
                         <li class="nav-item dropdown">
 		                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
 		                    	data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Coaches </a>
