@@ -53,6 +53,19 @@
 			  	 -->
 			  </div>
 			</div>
+			<div class="card-group">
+		  <div class="card mb-5 border-light" style="max-width: 540px;">
+			  <div class="row g-0">
+			    <div class="col-md-8" style="padding: 25px">
+			      <div class="card-body text-right">
+			        <h5 class="card-title"><%=rs.getString(1) %></h5>
+			      </div>
+			    </div>
+			    <div class="col-md-4" style="padding: 25px">
+			      <img src="<%=request.getContextPath()%>/logo.png" class="img-fluid rounded-start" alt="...">
+			    </div>
+			  </div>
+			</div>
 		  <div class="card mb-5 border-light" style="max-width: 520px;">
 			  <div class="row g-0">
 			    <div class="col-md-4" style="padding: 25px">
