@@ -43,14 +43,12 @@ body {
                 </a>
             </div>
             <div class="col mb-4">
-            	
                 <div class="card text-white bg-success mb-3">
                     <div class="card-header">Completed Tournaments</div>
                     <div class="card-body text-center">
                         <h1 class="display-2">0</h1>
                     </div>
                 </div>
-                
             </div>
             <div class="col mb-4">
             <a href="<%=request.getContextPath()%>/tournament/upcomingTournament.jsp" style="text-decoration: none !important">
