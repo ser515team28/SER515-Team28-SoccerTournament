@@ -151,6 +151,7 @@
                    					 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Referee </a>
                     			<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         			<a class="dropdown-item" href="<%=request.getContextPath()%>/referee/refereeRegistration.jsp">Registration</a>
+                        			<a class="dropdown-item" href="<%=request.getContextPath()%>/referee/Rd.jsp">Registration approval</a>
                         		</div>
                         </li>
                         <li class="nav-item dropdown">
