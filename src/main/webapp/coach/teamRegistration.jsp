@@ -1,8 +1,14 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" import="util.ConnectionProvider,java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <%@include file="/includes/head.jsp"%>
+<style type="text/css">
+.teamName {
+      padding-top: 10px;
+}
+</style>
 </head>
 <body style="background-color: #f8f9fa !important;">
     <%@include file="/includes/header.jsp"%>
@@ -13,23 +19,23 @@
             <h2 class="float-left">Add Team</h2>
         </div>
         <div class="card-body">
-            <form action="PlayerAdd" method="post">
+            <form action="AddTeam" method="post">
                 <div class="form-group">
                     <label for="teamname" class="control-label">Team Name</label> <input type="text" name="teamname" id="teamname" class="form-control"
                         required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="teamcode" class="control-label">Team Code</label> <input type="email" name="teamcode" id="teamcode" class="form-control"
+                    <label for="teamcode" class="control-label">Team Code</label> <input type="text" name="teamcode" id="teamcode" class="form-control"
                         required>
                 </div>
                 <div class="form-group">
                     <label for="clubcode" class="control-label">Club Code</label>
-                    <input type="number" name="clubcode" id="clubcode" class="form-control" required>
+                    <input type="text" name="clubcode" id="clubcode" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="city" class="control-label">City</label>
-                    <input type="number" name="city" id="city" class="form-control" required>
+                    <input type="text" name="city" id="city" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-success btn-lg btn-block" value="Add Team">
@@ -43,37 +49,27 @@
     
     <%
     Connection con = ConnectionProvider.getConnection();
-    String query="select TeamID,TeamName,TeamLOGO from Team_MST where coachId=(select id from users where email=\""+ session.getAttribute("email") +"\")";
+    String query="select TeamID,TeamName,TeamCode from Team_MST where coachId=(select id from users where email=\""+ session.getAttribute("email") +"\")";
 	PreparedStatement ps = con.prepareStatement((query));
 	ResultSet rs = ps.executeQuery();
     
     
     %>
-    <main role="main" class="container">
-    <div class="card-header text-white shadow bg-dark">
-            <h2 class="float-left">Registered Teams</h2>
-    </div>
-    </main>
-    <main role="main" class="container"> 
     
-    <% while(rs.next()){ %>
+    <main role="main" class="container" style="margin-bottom: 100px;"> 
+     <% while(rs.next()){ %>
     	<div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
                 <div class="card text-white bg-warning mb-3">
                     <div  class="card-header"><%=rs.getInt(1)%></div>
-                    <div class="card-body text-center">
-                        <button><img src="<%=request.getContextPath()%>/<%=rs.getString(3)%>"><a href="playerDetails.jsp"/></button>
+                    <div class="card-body ">
+                        <a class="btn btn-success btn-block" href="<%=request.getContextPath()%>/coach/playerDetails.jsp" style="background-color:#FFC107; font-size: 35px" ><%=rs.getString(3) %></a>
+                        <div class="teamName"><%=rs.getString(2)%></div>
                     </div>
-                    <div><%=rs.getString(2)%></div>
                 </div>
             </div>
-          
         </div>
-               
-    <%}%>
-    	
-       
-        
+    <%}%>
     </main>
     <%@include file="/includes/footer.jsp"%>
 </body>

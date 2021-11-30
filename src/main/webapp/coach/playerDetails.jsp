@@ -1,3 +1,5 @@
+<%@page import="com.mysql.cj.protocol.Resultset"%>
+<%@page import="com.mysql.cj.xdevapi.Result"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" import="util.ConnectionProvider,java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,6 +22,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Team</th>
                         <th scope="col">Position</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -27,19 +30,24 @@
                 <tbody>
                     <%
                     	Connection con = ConnectionProvider.getConnection();
-                    	PreparedStatement ps = con.prepareStatement("select playerid,name,position from player_mst order by playerid desc");
+                    	String query="select TeamID,TeamName from Team_MST where coachId=(select id from users where email=\""+ session.getAttribute("email") +"\")";
+                    	PreparedStatement ps = con.prepareStatement(query);
                     	ResultSet rs = ps.executeQuery();
                     	while (rs.next())
                         {
-                           
+                    		PreparedStatement ps1 = con.prepareStatement("select playerid,name,position from player_mst where TeamID=("+ rs.getInt(1) +")");
+                    		ResultSet rs1 = ps1.executeQuery();
+                    		while(rs1.next())
+                    			{
                         %>
                         <tr>
-                            <th scope="row"><%=rs.getInt(1)%></th>
-                            <td><%=rs.getString(2)%></td>
-                            <td><%= rs.getString(3) %></td>
-                            <td><a onclick="return confirm('Are you sure you want to delete it?');" class="btn btn-danger" href="UserDelete?id=<%= rs.getInt(1) %>" role="button">Delete</a></td>
+                            <th scope="row"><%=rs1.getInt(1)%></th>
+                            <td><%=rs1.getString(2)%></td>
+                            <td><%=rs.getString(2) %></td>
+                            <td><%= rs1.getString(3)%></td>
+                            <td><a onclick="return confirm('Are you sure you want to delete it?');" class="btn btn-danger" href="UserDelete?id=<%= rs1.getInt(1) %>" role="button">Delete</a></td>
                         </tr>
-                        <%   
+                        <%   }
                         }
                     %>
                 </tbody>
@@ -51,6 +59,3 @@
     <%@include file="/includes/footer.jsp"%>
 </body>
 </html>
-
-
-

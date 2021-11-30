@@ -3,8 +3,14 @@
 <html>
 <head>
 <%@include file="/includes/head.jsp"%>
+<style type="text/css">
+body {
+      background: url("bg.png")no-repeat;
+      background-size: cover;
+}
+</style>
 </head>
-<body style="background-color: #f8f9fa !important;">
+<body>	
     <%@include file="/includes/header.jsp"%>
     <%
     Connection con = ConnectionProvider.getConnection();
@@ -19,28 +25,32 @@
     ps = con.prepareStatement("select count(*) from complaints where status=1");
     rs = ps.executeQuery();
     if(rs.next()) {
-     close = rs.getInt(1);   
+     close = rs.getInt(1);
     }
     total = open + close;
     %>
     <main role="main" class="container"> 	
-        <%@include file="/includes/msg.jsp"%>
+    <%@include file="/includes/msg.jsp"%>
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
+                <a href="<%=request.getContextPath()%>/tournament/upcoming.jsp" style="text-decoration: none !important">
                 <div class="card text-white bg-warning mb-3">
                     <div class="card-header">Upcoming Tournaments</div>
                     <div class="card-body text-center">
                         <h1 class="display-2"><%= open %></h1>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="col mb-4">
+            	<a href="<%=request.getContextPath()%>/tournament/completed.jsp" style="text-decoration: none !important">
                 <div class="card text-white bg-success mb-3">
                     <div class="card-header">Completed Tournaments</div>
                     <div class="card-body text-center">
                         <h1 class="display-2"><%= close %></h1>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="col mb-4">
                 <div class="card text-white bg-primary mb-3">

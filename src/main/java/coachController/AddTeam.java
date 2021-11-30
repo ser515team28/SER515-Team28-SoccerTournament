@@ -1,5 +1,6 @@
 package coachController;
 
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,13 +17,13 @@ import util.ConnectionProvider;
 /**
  * Servlet implementation class UserAdd
  */
-public class coachRegistration extends HttpServlet {
+public class AddTeam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public coachRegistration() {
+    public AddTeam() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,9 +33,11 @@ public class coachRegistration extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		HttpSession session = request.getSession();
 		try{  
             Connection con=ConnectionProvider.getConnection() ;  
-            PreparedStatement ps=con.prepareStatement("select IFNULL(max(id),0) from users");
+            PreparedStatement ps=con.prepareStatement("select IFNULL(max(TeamID),0) from team_mst");
 			
 			ResultSet rs=ps.executeQuery();
 			int max=0;
@@ -43,14 +46,17 @@ public class coachRegistration extends HttpServlet {
 				max=rs.getInt(1);
 				max++;
 			}
-			
-			ps=con.prepareStatement("Insert into users values(?,?,?,?,?,?)");
+            
+			ps=con.prepareStatement("Insert into team_mst values(?,?,?,?,?,?,?,?)");
+		
 			ps.setInt(1, max);
-			ps.setString(2,	"2");
-			ps.setString(3, request.getParameter("name"));
-			ps.setString(4, request.getParameter("email"));
-			ps.setString(5, request.getParameter("password"));
-			ps.setInt(6, 0);
+			ps.setString(2,	request.getParameter("teamname"));
+			ps.setString(3, request.getParameter("teamcode"));
+			ps.setString(4, request.getParameter("clubcode"));
+			ps.setString(5, request.getParameter("city"));
+			ps.setString(6, "logo.png");
+			ps.setInt(7, (int) session.getAttribute("id"));
+			ps.setInt(8,0);
 			
 			ps.executeUpdate();
 			
@@ -59,10 +65,10 @@ public class coachRegistration extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		HttpSession session = request.getSession();
-		session.setAttribute("msg", "Registration successful.");
+		
+		session.setAttribute("msg", "Team added successfully.");
 		session.setAttribute("class", "alert-success");
-		response.sendRedirect(request.getContextPath() + "/admin/home.jsp");
+		response.sendRedirect(request.getContextPath() + "/coach/teamRegistration.jsp");
 	}
 
 }

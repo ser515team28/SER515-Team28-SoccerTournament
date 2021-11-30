@@ -25,23 +25,7 @@
                     <label for="password" class="control-label">Password</label>
                     <input type="password" name="password" id="password" class="form-control" required>
                 </div>
-                <div class="form-group">
-                    
-                    <label for="USER_TYPE" class="control-label">Type</label>
-                    <select id="USER_TYPE" name="USER_TYPE" class="form-control">
-                    <%
-                    Connection con=ConnectionProvider.getConnection();
-                    PreparedStatement ps = con.prepareStatement("select user_id,role from user_role_mapping where user_id=0");
-                    ResultSet rs = ps.executeQuery();
-                    while(rs.next())
-                    {
-                    %>
-                        <option value="<%= rs.getInt(1) %>"><%= rs.getString(2) %></option>
-                    <%   
-                    }
-                    %>
-                    
-                </div>
+                
                 
                 <div class="form-group">
                     <input type="submit" class="btn btn-success btn-lg btn-block" value="Add User">

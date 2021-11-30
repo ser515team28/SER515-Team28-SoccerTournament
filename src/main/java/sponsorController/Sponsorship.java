@@ -1,4 +1,4 @@
-package coachController;
+package sponsorController;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -13,28 +13,20 @@ import javax.servlet.http.HttpSession;
 
 import util.ConnectionProvider;
 
-/**
- * Servlet implementation class UserAdd
- */
-public class coachRegistration extends HttpServlet {
+
+public class Sponsorship extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public coachRegistration() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
+	
+	public Sponsorship() {
+		super();
+	}
+	
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{  
             Connection con=ConnectionProvider.getConnection() ;  
-            PreparedStatement ps=con.prepareStatement("select IFNULL(max(id),0) from users");
+            PreparedStatement ps=con.prepareStatement("select IFNULL(max(id),0) from sponsor");
 			
 			ResultSet rs=ps.executeQuery();
 			int max=0;
@@ -44,13 +36,13 @@ public class coachRegistration extends HttpServlet {
 				max++;
 			}
 			
-			ps=con.prepareStatement("Insert into users values(?,?,?,?,?,?)");
+			ps=con.prepareStatement("Insert into sponsor values(?,?,?,?,?,?)");
 			ps.setInt(1, max);
-			ps.setString(2,	"2");
-			ps.setString(3, request.getParameter("name"));
+			ps.setString(2,	request.getParameter("business_name"));
+			ps.setString(3, request.getParameter("person_name"));
 			ps.setString(4, request.getParameter("email"));
-			ps.setString(5, request.getParameter("password"));
-			ps.setInt(6, 0);
+			ps.setString(5, request.getParameter("phone_number"));
+			ps.setString(6, request.getParameter("interest"));
 			
 			ps.executeUpdate();
 			
@@ -60,9 +52,8 @@ public class coachRegistration extends HttpServlet {
 		}
 
 		HttpSession session = request.getSession();
-		session.setAttribute("msg", "Registration successful.");
+		session.setAttribute("msg", "Applied successful. You will here form tournament director soon");
 		session.setAttribute("class", "alert-success");
 		response.sendRedirect(request.getContextPath() + "/admin/home.jsp");
 	}
-
 }

@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>TicketingSystem</display-name>
+  <display-name>TournamentSystem</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>/admin/home.jsp</welcome-file>
   </welcome-file-list>
   <filter>
     <display-name>AuthFilter</display-name>
@@ -253,4 +248,36 @@
     <url-pattern>/coach/PlayerAdd</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <display-name>AddTeam</display-name>
+    <servlet-name>AddTeam</servlet-name>
+    <servlet-class>coachController.AddTeam</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddTeam</servlet-name>
+    <url-pattern>/coach/AddTeam</url-pattern>
+  </servlet-mapping>
+  
+  <!--Referee package servlet mapping   -->
+  <servlet>
+    <display-name>refereeRegistration</display-name>
+    <servlet-name>refereeRegistration</servlet-name>
+    <servlet-class>refereeController.refereeRegistration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>refereeRegistration</servlet-name>
+    <url-pattern>/referee/refereeRegistration</url-pattern>
+  </servlet-mapping>
+  
+  <!--Sponsor package servlet mapping   -->
+  <servlet>
+    <display-name>Sponsorship</display-name>
+    <servlet-name>Sponsorship</servlet-name>
+    <servlet-class>sponsorController.Sponsorship</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sponsorship</servlet-name>
+    <url-pattern>/sponsor/sponsorship</url-pattern>
+  </servlet-mapping>
+
 </web-app>
