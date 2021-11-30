@@ -164,6 +164,7 @@
                     			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us </a>
                     		<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         		<a class="dropdown-item" href="<%=request.getContextPath()%>/aboutUs/info.jsp">Info</a>
+                        		<a class="dropdown-item" href="<%=request.getContextPath()%>/aboutUs/FieldsList.jsp">Fields</a>
                         		<a class="dropdown-item" href="<%=request.getContextPath()%>/aboutUs/jobs.jsp">Apply Jobs</a>
                         		<a class="dropdown-item" href="<%=request.getContextPath()%>/aboutUs/privpol.jsp">Privacy and Policies</a>
                     		</div>
