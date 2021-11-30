@@ -12,19 +12,12 @@
             <h2 class="float-left">About Us</h2>
         </div>
         <div class="card-body">
-	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-	        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-	        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-	        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-	        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	        <p>Team 28 Soccer Association is recognized as the largest soccer league and tournament host in the United States. Our league and tournaments are held at the world class all turf soccer facilities of SCHEELS Overland Park Soccer Complex, Swope Soccer Village, Compass Minerals Sporting Fields and GARMIN Olathe Soccer Complex.
+The league accepts players of all skill levels including recreational and premier level players and teams. Each year over 170+ different soccer clubs compete through the Heartland League in Spring, Fall and Winter leagues.  Over 1,300+ teams and 30,000+ youth from age 12 to 48 compete each league season and many age groups have up to 9 subdivisions with 9 or more teams playing in each subdivision. The sheer number of teams allow players and teams the opportunity to compete against similarly skilled teams at all ages.
 	        </p>
-	        <p>Ut aliquam purus sit amet luctus venenatis lectus magna. Risus sed vulputate odio ut enim. 
-	        Et leo duis ut diam quam nulla porttitor. Nisi vitae suscipit tellus mauris a diam. 
-	        Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Viverra maecenas accumsan lacus vel facilisis volutpat est. 
-	        Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Duis ut diam quam nulla porttitor. 
-	        Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed. Aliquam ultrices sagittis orci a scelerisque purus. 
-	        Egestas erat imperdiet sed euismod nisi porta. 
-	        Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Odio morbi quis commodo odio.
+	        <p>In addition to league play, Team 28 Soccer Association hosts 14+ exceptional tournaments each year. Our tournaments draw in more than 2,700+ teams and 43,000+ youth players, from over 16 states including Texas, Minnesota, Louisiana, Oklahoma, Nebraska, Iowa, South Dakota, Wisconsin, Colorado and Illinois, as well as Mexico and Canada.
+	        </p>
+	        <p>In league and tournaments in addition to the players, there are 4,000 coaches and 2,300 referees each year who participate.
 	        </p>
         </div>
     </div>
